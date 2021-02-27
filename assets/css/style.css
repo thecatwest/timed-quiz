@@ -1,0 +1,46 @@
+/* TODO */
+
+/* colors */
+:root {
+    --primary-color: #f2aa4cff;
+    --secondary-color: #101820ff;
+    -tertiary-color: gray
+}
+
+body {
+    background: whitesmoke;
+}
+
+.container {
+    text-align: center;
+    
+}
+
+.green-text {
+    color: green;
+}
+
+.red-text {
+    color: red;
+}
+
+#start-btn {
+    
+}
+
+/* Start Button Style */
+#start-btn {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 25px;
+    font-weight: 500;
+    color: var(--primary-color);
+    background: var(--secondary-color);
+    padding: 15px 30px;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+}
+
