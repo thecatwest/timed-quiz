@@ -1,42 +1,67 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./assets/css/style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./assets/css/style.css" />
     <style></style>
     <title>Timed Coding Quiz</title>
-</head>
-<body>
-<!-- Timer -->
-    <div class="container">
-        <h1 class="intro">Timed Coding Quiz</h1>
-        <p>
-            Test your coding knowledge with this timed quiz. 
-        </p>
-        <!-- Start Quiz Button -->
-        <button id="start-btn">Start Quiz</button>
-
-        <!-- Rules -->
-        <div class="rules-box">
-            <div class="rules-title">
-                <span>Quiz Rules</span>
-            </div>
-            <div class="rules-list">
-                <div class="rule">1. You will have 60 seconds to complete the quiz.</div>
-                <div class="rule">2. Correct answers earn you <span class="green-text">points toward your score</span>.</div>
-                <div class="rule">3. Incorrect answers <span class="red-text">deduct 10 seconds</span> from your remaining time.</div>
-                <div class="rule">4. Once you finish, or time runs out, you can save your score and view other high scores.</div>
-            </div>
-            <!-- Quiz Start / Exit Buttons -->
-            <div class="buttons">
-                <button class="begin">Begin Quiz</button>
-                <button class="exit">Exit</button>
-            </div>
-        </>
+  </head>
+  <body>
+    <!-- High Scores -->
+    <div class="high-scores">
+      <a href="highs-scores.html">View High Scores</a>
     </div>
-<!-- Link to JavaScript File -->
-<script src="./assets/js/script.js"></script>
-</body>
+
+    <!-- Timer -->
+    <div class="timer">Timer: <span id="time">0</span></div>
+    <div class="container">
+      <h1 class="intro">Timed Coding Quiz</h1>
+      <p>
+        Test your coding knowledge with this timed quiz.
+        <br />
+        1. You will have 60 seconds to complete the quiz.
+        <br />
+        2. Correct answers earn you
+        <span class="green-text">points toward your score</span>.
+        <br />
+        3. Incorrect answers
+        <span class="red-text">deduct 10 seconds</span> from your remaining
+        time.
+        <br />
+        4. Once you finish, or time runs out, you can save your score and view
+        other high scores.
+      </p>
+      <!-- Start Quiz Button -->
+      <button type="button" id="start-btn">Start Quiz</button>
+    </div>
+    <div id="answer-btns">
+      <button type="button" id="answer1"></button>
+      <button type="button" id="answer2"></button>
+      <button type="button" id="answer3"></button>
+      <button type="button" id="answer4"></button>
+    </div>
+
+    <div id="queries" class="hidden">
+      <h2 id="query-title"></h2>
+      <div id="choices" class="choices"></div>
+    </div>
+
+    <div id="game-end" class="hidden">
+      <h2>Congratulations!</h2>
+      <p>
+        You scored <span class="end-score"></span>
+        <br />
+        Enter your initials: <input type="text" id="initials" max="3" />
+        <button id="submit">Submit Initials</button>
+      </p>
+    </div>
+
+    <div id="feedback" class="feedback hidden"></div>
+
+    <!-- Link to JavaScript File -->
+    <!-- <script src="./assets/js/queries.js"></script> -->
+    <script src="./assets/js/script.js"></script>
+  </body>
 </html>
