@@ -1,14 +1,14 @@
 /* TODO */
-
+ 
 /* colors */
 :root {
     --primary-color: #f2aa4cff;
     --secondary-color: #101820ff;
-    -tertiary-color: gray
+    --tertiary-color: ghostwhite;
 }
 
 body {
-    background: whitesmoke;
+    background: var(--tertiary-color);
 }
 
 .container {
@@ -18,22 +18,15 @@ body {
 
 .green-text {
     color: green;
+    font-weight: bolder;
 }
 
 .red-text {
     color: red;
+    font-weight: bolder;
 }
 
-#start-btn {
-    
-}
-
-/* Start Button Style */
-#start-btn {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+.btn {
     font-size: 25px;
     font-weight: 500;
     color: var(--primary-color);
@@ -42,5 +35,13 @@ body {
     outline: none;
     border: none;
     border-radius: 5px;
+}
+
+/* Button Style */
+#start-btn {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
