@@ -47,8 +47,14 @@ body {
 
 .answer-btn {
     width: 35%;
-    padding: 15px;
-    border-radius: 10px;
     margin: 10px;
+    font-size: 25px;
+    font-weight: 500;
+    color: var(--primary-color);
+    background: var(--secondary-color);
+    padding: 15px 30px;
+    outline: none;
+    border: none;
+    border-radius: 5px;
 }
 
