@@ -4,7 +4,7 @@ var playerTime = 60;
 var index = 0;
 var playerAnswer = "";
 var correctAnswer = "";
-var score = "0";
+var score = "";
 
 var question = document.getElementById("question");
 var answer1 = document.getElementById("answer-1");
@@ -103,6 +103,17 @@ function newAnswer() {
   answer4.innerText = quizQuestions[index].choices[quizAnswers[3]];
 }
 
+// fn() to handle answer button hide
+function btnFunction() {
+  var hideBtn = document.getElementById("questionBtns");
+  hideBtn.style.display = "block";
+}
+
+function queriesFunction() {
+  var hideQueries = document.getElementById("qsBtnText");
+  hideQueries.style.display = "block";
+}
+
 // function to begin quiz
 function beginQuiz() {
   hasBegun = true;
@@ -125,9 +136,7 @@ function beginQuiz() {
 
 // check if correct answer was selected and adjust time
 function isCorrect() {
-  if (playerAnswer === correctAnswer) {
-    playerTime = playerTime + 5;
-  } else {
+  if (playerAnswer != correctAnswer) {
     playerTime = playerTime - 10;
   }
 }
@@ -150,10 +159,11 @@ function gamePlay() {
 
 // function for end of game
 function gameOver() {
-  alert(
-    `The game has ended. Your score is ${score}. Save your score to the High Scores board by entering your handle!`
-  );
-  window.location.replace("./high-scores.html");
+  
+  var handle = prompt(
+    `The game has ended. Your score is ${score}. Save your score to the High Scores board by entering your handle! Enter your initials to save your score.`
+  ); 
+  localStorage.setItem("handle", handle);
 }
 
 // start button event listener

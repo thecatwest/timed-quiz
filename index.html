@@ -11,7 +11,7 @@
   <body>
     <!-- High Scores -->
     <div class="high-scores">
-      <a href="highs-scores.html">View High Scores</a>
+      <p>Current High Score: <span id=high-score></span></p>
     </div>
 
     <!-- Timer -->
@@ -34,35 +34,26 @@
         other high scores.
       </p>
       <!-- Start Quiz Button -->
-      <button type="button" id="start-btn">Start Quiz</button>
-    </div>
-    <div id="buttons">
       <h2 id="question">Are you ready to begin?</h2>
-      <button type="button" id="answer-1" class="answer-btn"></button>
-      <button type="button" id="answer-2" class="answer-btn"></button>
-      <button type="button" id="answer-3" class="answer-btn"></button>
-      <button type="button" id="answer-4" class="answer-btn"></button>
+      <button onClick="btnFunction()" type="button" id="start-btn">Start Quiz</button>
     </div>
-<!-- 
-    <div id="queries" class="hidden">
+    <!-- <button onClick="btnFunction()"></button> -->
+    <div id="questionBtns" style="display: none" class="centered">
+      <button type="button" id="answer-1" class="btn"></button>
+      <button type="button" id="answer-2" class="btn"></button>
+      <button type="button" id="answer-3" class="btn"></button>
+      <button type="button" id="answer-4" class="btn"></button>
+    </div>
+
+    <div id="qsBtnText" style="display: none">
       <h2 id="query-title"></h2>
       <div id="choices" class="choices"></div>
-    </div> -->
-
-    <!-- <div id="game-end" class="hidden">
-      <h2>Congratulations!</h2>
-      <p>
-        You scored <span class="end-score"></span>
-        <br />
-        Enter your initials: <input type="text" id="initials" max="3" />
-        <button id="submit">Submit Initials</button>
-      </p>
-    </div> -->
+    </div>
 
     <div id="feedback" class="feedback hidden"></div>
 
     <!-- Link to JavaScript File -->
-    <!-- <script src="./assets/js/queries.js"></script> -->
     <script src="./assets/js/queries.js"></script>
+    <script src="./assets/js/high-scores.js"></script>
   </body>
 </html>

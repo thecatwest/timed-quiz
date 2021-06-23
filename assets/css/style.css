@@ -27,10 +27,12 @@ body {
 }
 
 .btn {
+    width: 35%;
+    margin: 10px;
     font-size: 25px;
     font-weight: 500;
     color: var(--primary-color);
-    background: var(--secondary-color);
+    /* background: var(--secondary-color); */
     padding: 15px 30px;
     outline: none;
     border: none;
@@ -58,3 +60,10 @@ body {
     border-radius: 5px;
 }
 
+/* .centered {
+    position: fixed;
+    top: 50%;
+    left: 31.8%;
+    margin-top: -50px;
+    margin-left: -31.8px;
+} */
